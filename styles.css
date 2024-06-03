@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    font-family: Serif, Garamond;
+    margin: 0;
+    padding: 0;
+    background: url('Images/Food_Background.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 99, 71, 0.8); /* Tomato color with transparency */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    height: 30px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8); /* White background with transparency for readability */
+    border-radius: 10px; /* Rounded corners for a nicer look */
+}
+
+section.introduction {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section.introduction h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Carousel styles */
+.carousel {
+    position: relative;
+    max-width: 60%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 500px; /* Maximum width for the images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Recipe Details Styles */
+.recipe-details {
+    padding: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.recipe-details h3 {
+    margin-top: 0;
+}
+
+.recipe-details p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}

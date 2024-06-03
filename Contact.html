@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Flavours by Halalicious</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Your custom favicon -->
+    <link rel="icon" href="Images/Halalicious.jpeg">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#">
+                <img src="Images/Halalicious.jpeg" alt="Halalicious Logo" height="50">
+                <h1>Flavours by Halalicious</h1>
+            </a>
+            <ul class="nav-links">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Menu/Menu.html">Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need more information, please feel free to contact us using the form below:</p>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Flavours by Halalicious. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavours by Halalicious</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Your custom favicon -->
+    <link rel="icon" href="Images/Halalicious.jpeg">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/HalaliciousTX?mibextid=LQQJ4d"><img src="Images/Facebook.png" alt="Facebook Logo" height="100"></a>
+            <a href="https://www.instagram.com/halalicious_tx/?igsh=Z25yYnU3eWV0cGg3&utm_source=qr"><img src="Images/Instagram.png" alt="Instagram Logo" height="100"></a>
+            <a href="Halalicious.html"><img src="Images/Halalicious.jpeg" alt="Halalicious Logo" height="100"></a>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="Halalicious.html">
+                <h1>Flavours by Halalicious</h1>SS
+            </a>
+            <div class="ml-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Menu/Menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="introduction">
+            <h2>Welcome to Flavours by Halalicious</h2>
+            <p>Happiness is homemade, like our food!</p>
+        </section>
+        
+        <section id="menu" class="Our">
+            <div class="carousel">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="Images/Kheer.jpg" alt="Delicious Dish Kheer">
+                    </div>
+                    <div class="slide">
+                        <img src="Images/Singaporean Rice.jpg" alt="Delicious Dish Rice">
+                    </div>
+                    <div class="slide">
+                        <img src="Images/Halwa.jpg" alt="Delicious Dish Halwa">
+                    </div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Flavours by Halalicious. All rights reserved.</p>
+    </footer>
+    <script>
+        let currentSlide = 0;
+        let slideInterval;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100;
+            document.querySelector('.slides').style.transform = 'translateX(' + offset + '%)';
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        function startSlideShow() {
+            slideInterval = setInterval(() => moveSlide(1), 3000);
+        }
+
+        function stopSlideShow() {
+            clearInterval(slideInterval);
+        }
+
+        document.querySelector('.carousel').addEventListener('mouseenter', stopSlideShow);
+        document.querySelector('.carousel').addEventListener('mouseleave', startSlideShow);
+
+        // Start the slideshow when the page loads
+        startSlideShow();
+    </script>
+</body>
+</html>
